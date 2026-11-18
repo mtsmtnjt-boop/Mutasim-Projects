@@ -1,0 +1,8 @@
+{
+  "appId": "com.mutasimtt.maintenance",
+  "appName": "Mutasim_tt",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  }
+}
