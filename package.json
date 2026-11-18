@@ -1,0 +1,16 @@
+{
+  "name": "mutasim-tt",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Arabic maintenance guide for JINLONG SJL-600TM",
+  "scripts": {
+    "build": "node -e \"require('fs').mkdirSync('www',{recursive:true});for(const f of require('fs').readdirSync('.')){if(['.html','.json','.webmanifest','.svg','.js'].some(x=>f.endsWith(x)) && !['package.json'].includes(f))require('fs').copyFileSync(f,'www/'+f)};for(const d of ['data'])if(require('fs').existsSync(d))require('fs').cpSync(d,'www/'+d,{recursive:true})\""
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.3",
+    "@capacitor/core": "^7.4.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.3"
+  }
+}
