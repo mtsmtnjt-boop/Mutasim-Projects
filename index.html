@@ -2,7 +2,11 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#071426"><title>Mutasim_tt | موسوعة صيانة ماكينة الجوارب</title>
+<meta name="theme-color" content="#071426">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icon.svg" type="image/svg+xml">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><title>Mutasim_tt | موسوعة صيانة ماكينة الجوارب</title>
 <style>
 :root{--bg:#071426;--panel:#10233c;--panel2:#142c49;--line:#244566;--blue:#27b7ff;--cyan:#64e3ff;--text:#eef7ff;--muted:#a9bfd4;--gold:#ffc857;--red:#ff647c}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 0,#12365b 0,transparent 35%),var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif;min-height:100vh}
@@ -53,4 +57,5 @@ function detailPart(i){const p=parts[i];document.getElementById('partsList').ins
 document.getElementById('partSearch').addEventListener('input',e=>renderParts(e.target.value.trim()));renderParts();
 function renderFaults(q=''){document.getElementById('faultList').innerHTML=faults.filter(f=>f.join(' ').includes(q)).map(f=>'<div class="box"><h3>⚠️ '+f[0]+'</h3><p class="muted">'+f[1]+'</p></div>').join('')||'<div class="box muted">لا توجد نتائج.</div>'}
 document.getElementById('faultSearch').addEventListener('input',e=>renderFaults(e.target.value.trim()));renderFaults();
-</script></body></html>
+</script><script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));}</script>
+</body></html>
